@@ -1,11 +1,11 @@
 const mongoose = require('mongoose')
 
-const vegetableSchema = new mongoose.Schema({
-  name: { type: String, require: true },
-  color: { type: String, require: true },
-  readyToEat: Boolean
+const logsSchema = new mongoose.Schema({
+  title: { type: String, require: true },
+  entry: { type: String, require: true },
+  shipIsBroken: Boolean
 })
 
-const Vegetable = mongoose.model('Vegetable', vegetableSchema)
+const Logs = mongoose.model('Logs', logsSchema)
 
-module.exports = Vegetable
+module.exports = Logs

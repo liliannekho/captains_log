@@ -27,6 +27,20 @@ app.get('/logs/new', (req, res) => {
 
 // Create Route
 
+app.post('/logs', async (req, res) => {
+    if(req.body.shipIsBroken === 'on'){
+        req.body.shipIsBroken = true
+    }else{
+        req.body.shipIsBroken = false
+    }
+    try{
+        // const createdLog = await Log.create(req.body)
+        res.send('received')
+        // res.redirect(`/logs/${createdLog._id}`)
+    }catch(error){
+        res.status(400).send({message: error.message})
+    }
+})
 
 
 // Show Route
