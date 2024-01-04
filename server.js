@@ -1,6 +1,6 @@
 // Initial Setup
 require('dotenv').config()
-const express = require('express') // imported express from node modules
+const express = require('express') 
 const mongoose = require('mongoose')
 const jsxEngine = require('jsx-view-engine')
 const methodOverride = require('method-override')
