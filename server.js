@@ -1,11 +1,13 @@
 // Initial Setup
 require('dotenv').config()
-const express = require('express') 
+const express = require('express') // imported express from node modules
 const mongoose = require('mongoose')
 const jsxEngine = require('jsx-view-engine')
 const methodOverride = require('method-override')
+const bodyParser = require('body-parser')
 const PORT = process.env.PORT || 3000
-const Log = require('./models/log')
+const Log = require('./models/logs')
+
 const app = express()
 
 app.use(express.urlencoded({ extended:true }))
